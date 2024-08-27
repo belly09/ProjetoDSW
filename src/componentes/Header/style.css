@@ -7,10 +7,54 @@
     margin: 10px auto;
 }
 
-header picture {
+.header picture {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 110px;
 
+}
+
+.header nav ul li a {
+    text-transform: uppercase;
+    color: rgb(238, 102, 250);
+    font-weight: 500;
+    position: relative;
+}
+
+.header nav ul li a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background: #000;
+    width: 0%;
+    height: 1px;
+    transition: 0.6s;
+}
+
+.header nav ul li a:hover:after{
+    width: 100%;
+}
+
+.header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+@media(max-width:480px){
+    .header {
+        justify-content: center;
+    }
+
+    .header nav ul {
+        justify-content: center;
+    }
+
+    .header nav ul li a {
+        padding: 3px 6px;
+        background: #f7f7f7;
+        border-radius: 5px;
+    }
 }
